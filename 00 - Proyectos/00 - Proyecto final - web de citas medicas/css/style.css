@@ -1,0 +1,125 @@
+*, body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+}
+
+/* Estilos del encabezado */
+header {
+    background-color: #1a1a1a;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+}
+
+/* Estilos del contenido principal */
+main {
+    text-align: center;
+    margin: 10px auto;
+}
+
+/* Estilos del formulario */
+#form {
+    max-width: 400px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#form h3 {
+    color: rgb(8, 8, 8);
+    text-align: left;
+    margin-top: 0px;
+}
+
+.vista.citas h3 {
+    color: rgb(8, 8, 8);
+    margin-top: 5px;
+}
+
+/* Estilos de etiquetas de formulario */
+label {
+    display: block;
+    margin-bottom: 8px;
+    color: #333;
+}
+
+/* Estilos de campos de entrada de formulario */
+input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 15px;
+    box-sizing: border-box;
+}
+
+/* Estilos del botón de formulario */
+button {
+    background-color: #3498db;
+    color: #f4efef;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+/* Estilos de la vista de citas */
+.vista.citas {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    padding: 1px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+}
+
+/* Estilos de la tabla de citas */
+#citasTable {
+    width: 80%;
+    border-collapse: collapse;
+    margin-top: 5px;
+}
+
+#citasTable th,
+#citasTable td {
+    border: 1px solid #0f0f0f;
+    padding: 8px;
+    text-align: left;
+}
+
+/* Estilos de las celdas de encabezado de la tabla de citas */
+#citasTable th {
+    background-color: #3498db;
+    color: #fff;
+}
+
+/* Estilos del pie de página */
+footer {
+    background-color: #1a1a1a;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+@media (max-width: 600px) {
+    #citasTable {
+        width: 100%;
+        margin: 3px;
+    }
+
+    /*citasTable th:nth-child(2),
+    #citasTable td:nth-child(2),*/
+    #citasTable th:nth-child(3),
+    #citasTable td:nth-child(3) {
+        display: none; /* Ocultar solo las columnas de nombre y teléfono en pantallas pequeñas */
+    }
+}
