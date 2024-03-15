@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio condicionales</title>
+</head>
+<body>
+    <script>
+        let alumno1 = parseInt(prompt("Ingrese la nota de alumno 1: "));
+        let alumno2 = parseInt(prompt("Ingrese la nota de alumno 2: "));
+        let alumno3 = parseInt(prompt("Ingrese la nota de alumno 3"));
+
+        let suma = alumno2 + alumno1 + alumno3;
+        let promedio = suma / 3;
+
+        if(promedio >= 7){
+            document.write("Los alumnos han promocionado." + promedio);
+        } else{
+            document.write("Los alumnos no han promocionado." + promedio);
+        }
+
+        document.write("<br>");
+        document.write("<br>");
+
+        let clave1 = prompt("Introduzca la clave: ");
+        let clave2 = prompt("Introduzca la clave otra vez: ");
+
+        if( clave1 == clave2){
+            document.write("Las claves son iguales, enhorabuena");
+
+        } else{
+            document.write("Las claves no coinciden...");
+        }
+
+    </script>
+</body>
+</html>

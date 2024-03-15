@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <a href="#" onmouseover="pintar('#f00')" onmouseout="pintar('#000')">Rojo</a>
+    <a href="#" onmouseover="pintar('#0f0')" onmouseout="pintar('#000')">Verde</a>
+    <a href="#" onmouseover="pintar('#00f')" onmouseout="pintar('#000')">Azul</a>
+    <div id="cuadrado" style="background:#000; width: 200px; height: 200px"></div>
+
+    <script>
+        function pintar(col){
+            document.getElementById('cuadrado').style.backgroundColor = col;
+        }
+    </script>
+
+</body>
+</html>

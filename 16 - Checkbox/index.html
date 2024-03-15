@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <input type="checkbox" id="checkbox1"> JavaScript
+        <br>
+        <input type="checkbox" id="checkbox2"> Php
+        <br>
+        <input type="checkbox" id="checkbox3"> Python
+        <br>
+        <input type="checkbox" id="checkbox4"> Java
+        <br>
+        <input type="button" value="Mostrar" onclick="Seleccionado()">
+    </form>
+
+    <script>
+        function Seleccionado(){
+            let cantidad = 0;
+            if(document.getElementById("checkbox1").checked){
+                cantidad ++;
+            }if(document.getElementById("checkbox2").checked){
+                cantidad ++;
+            }if(document.getElementById("checkbox3").checked){
+                cantidad ++;
+            }if(document.getElementById("checkbox4").checked){
+                cantidad ++;
+            }
+            alert("Conoces " + cantidad + " de lenguajes");
+        }
+    </script>
+</body>
+</html>

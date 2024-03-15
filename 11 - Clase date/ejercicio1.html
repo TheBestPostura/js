@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 1</title>
+</head>
+<body>
+    <script>
+        let fecha;
+        fecha = new Date();
+        let mes = fecha.getMonth();
+        if(mes < 4){
+            document.write("Nos encontramos en el primer cuatrimestre de este año");
+        }else{
+            if(mes < 8){
+                document.write("Nos encontramos en el segundo cuatrimestre de este año");
+            }else{
+                document.write("Nos encontramos en el tercer cuatrimestre de este año");
+            }
+        }
+    </script>
+    
+</body>
+</html>

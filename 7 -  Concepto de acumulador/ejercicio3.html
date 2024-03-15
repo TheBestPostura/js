@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 3</title>
+</head>
+<body>
+    <script>
+        let empleados = 1;
+        let sueldo = 0;
+        let sueldoMenor = 0;
+        let sueldoMayor = 0;
+        let gastoPersonal = 0;
+
+        while(empleados <= 5){
+            sueldo = parseInt(prompt("Introduzca el sueldo del empleado numero " + empleados));
+            if(sueldo >= 100 && sueldo <= 300){
+                sueldoMenor++;
+                gastoPersonal = gastoPersonal + sueldo;
+            } else{
+                if(sueldo > 300){
+                    sueldoMayor++;
+                    gastoPersonal = gastoPersonal + sueldo;
+                }else{
+                    let i = 0;
+                    i++;
+                    document.write(i + " Personas no esta en ese rango");
+                    gastoPersonal = gastoPersonal + sueldo;
+                }
+            }
+            empleados++;
+        }
+        document.write(sueldoMenor + " personas cobran entre 100$ y 300$");
+        document.write("<br>");
+        document.write(sueldoMayor + " personas cobran entre mas de 300$");
+        document.write("<br>");
+        document.write(i + "personas no estan en dicho rango");
+    </script>
+</body>
+</html>

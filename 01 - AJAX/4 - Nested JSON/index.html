@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button type="button" onclick="ajaxGetJson()">Mostrar datos</button>
+
+    <div id="info"></div>
+
+    <script>
+        var resultado = document.getElementById("info");
+
+        function ajaxGetJson(){
+
+            var xmlHttp;  
+
+            if(window.XMLHttpRequest){
+                xmlHttp = new XMLHttpRequest();
+            }else{
+                xmlHttp = new ActiveXObject("Microsoft.XMLHTTP");
+            }
+
+            xmlHttp.onreadystatechange = function(){
+                if(xmlHttp.readyState == 4 && xmlHttp.status == 200){  
+                    var datos = JSON.parse(xmlHttp.responseText);  
+
+                    for(let i in datos){
+                        resultado.innerHTML += "<h5>" + i + "<h5>";
+                            
+                        var persona = datos[i];
+
+                        for(var j in persona){
+                            resultado.innerHTML += j + " : " + persona[j] + "<br/>";
+                        }
+                    } 
+                }    
+                }
+            
+        
+            xmlHttp.open("GET", "datos.json", true);
+            xmlHttp.send();
+        }   
+    </script>
+</body>
+</html>

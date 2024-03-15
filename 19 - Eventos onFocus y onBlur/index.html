@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <form>
+        <input type="text" id="nombre" value="nombre" onfocus="vaciar(this)"><br>
+        <input type="text" id="edad" value="mail" onfocus="vaciar(this)">
+        <br>
+        <input type="button" value="confirmar" onclick="verificarEntrada(document.getElementById('nombre'))">
+    </form>
+
+    <script>
+
+        function vaciar(control){
+            control.value = '';
+        }
+
+        function verificarEntrada(control){
+            alert("Ingreso: " + control.value);
+        }
+    </script>
+</body>
+</html>

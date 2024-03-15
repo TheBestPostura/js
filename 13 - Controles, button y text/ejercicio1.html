@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos onclick</title>
+</head>
+<body>
+    <form>
+        <p>introduzca el numero que desea elevar al cubo<input type="text" id="numero"></p>
+        <p><input type="button" value="Confirmar" onClick="mostrar()"></p>
+    </form>
+
+    <script>
+       function mostrar(){
+        let numero = document.getElementById("numero").value;
+        numero = parseInt(numero);
+        let cubo = numero * numero * numero;
+        alert("El numero introducido elevado al cubo es: " + cubo);
+       }
+       
+    </script>
+</body>
+</html>

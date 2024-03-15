@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funciones con parametros</title>
+</head>
+<body>
+    <script>
+        function mostrarMayor(x1, x2, x3){
+            if(x1 > x2 && x1 > x3){
+                return x1;
+            }else{
+                if(x2 > x3){
+                    return x2;
+                }else{
+                return x3;
+            }
+            }
+        }
+
+        let valor1 = parseInt(prompt("Ingrese el primer valor: "));
+        let valor2 = parseInt(prompt("Ingrese el segundo valor: "));
+        let valor3 = parseInt(prompt("Ingrese el tercer valor: "));
+        let mayor = mostrarMayor(valor1, valor2, valor3);
+        document.write("El numero mayor es: " + mayor);
+
+    </script>
+    
+</body>
+</html>

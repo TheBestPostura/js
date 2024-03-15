@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="pulsarBoton()">Redireccionar a un periodico</button>
+
+    <script>
+        function pulsarBoton(){
+
+        let numero = Math.random()*3;
+        numero = parseInt(numero);
+
+        if(numero == 1){
+            window.location = "https://www.marca.com/";
+        }else if(numero == 2){
+            window.location = "https://www.sport.es/es/";
+        }else{
+            window.location = "https://as.com/";
+        }
+    }
+    </script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <p>Introduzca su nombre: <input type="text" id="nombre"></p>
+        <p>Introduce su apellido: <input type="text" id="apellido"></p>
+        <p><input type="button" value="Enviar" onclick="mostrar()"></input></p>
+        <input type="text" id="vacio">
+    </form>
+
+    <script>
+        function mostrar(){
+            let nombre = document.getElementById("nombre").value;
+            let apellido = document.getElementById("apellido").value;
+            document.getElementById("vacio").value = nombre + " " + apellido;
+            return false;
+        }
+    </script>
+</body>
+</html>

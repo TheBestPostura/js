@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 2</title>
+</head>
+<body>
+    <script>
+        let personas = 1;
+        let altura;
+        let total = 0;
+        let promedio;
+
+        while(personas <=5){
+            altura = parseFloat(prompt("Introduzca la altura de las personas: " + personas));
+            total = altura + total;
+            personas++;
+        }
+        promedio = total / personas;
+        document.write("La altura promedio de las 5 personas es: " + promedio);
+    </script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <p><select id="select1" onchange="cambiarColor()">
+            <option value="ff0000">Rojo</option>
+            <option value="00ff00">Verde</option>
+            <option value="0000ff">Azul</option>
+    </select></p>
+    <p>Numero del incide seleccionado del objeto SELECT: <input type="text" id="text1"></p>
+    <p>Texto seleccionado: <input type="text" id="text2"></p>
+    <p>Valor asociado: <input type="text" id="text3"></p>
+    </form>
+
+    <script>
+       function cambiarColor(){
+    // Obtener el elemento select con el id "select1"
+    let seleccion = document.getElementById("select1");
+
+    // Establecer el valor del elemento con el id "text1" como el índice seleccionado en el elemento select
+    document.getElementById("text1").value = seleccion.selectedIndex;
+
+    // Establecer el valor del elemento con el id "text2" como el texto de la opción seleccionada en el elemento select
+    document.getElementById("text2").value = seleccion.options[seleccion.selectedIndex].text;
+
+    // Establecer el valor del elemento con el id "text3" como el valor de la opción seleccionada en el elemento select
+    document.getElementById("text3").value = seleccion.options[seleccion.selectedIndex].value;
+}
+    </script>
+</body>
+</html>

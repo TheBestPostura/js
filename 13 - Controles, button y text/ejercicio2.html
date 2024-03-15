@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <p>Carga numero 1: <input type="text" id="numero1"></input></p>
+        <p>Cargar numero 2<input type="text" id="numero2"></input></p>
+        <p><button onclick="mostrar()">Confirmar</button></p>
+    </form>
+
+    <script>
+        function mostrar(){
+            let numero1 = document.getElementById("numero1").value;
+            let numero2 = document.getElementById("numero2").value;
+            numero1 = parseInt(numero1);
+            numero2 = parseInt(numero2);
+
+            if(numero1 > numero2){
+                alert("El numero introducido en primer lugar es el mayor: " + numero1);
+            }else{
+                alert("El numero introducido en segundo lugar es el mayor: " + numero2);
+            }
+        }
+    </script>
+</body>
+</html>

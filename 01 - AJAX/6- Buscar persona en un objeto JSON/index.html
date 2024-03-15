@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        .encontrado{
+            color: green;
+        }
+
+        .no-encontrado{
+            color: red;
+        }
+
+    </style>
+</head>
+<body>
+    Buscar persona: <input type="text" onkeyup="ajax_get_json(this.value)"/>
+
+    <div id="info"></div>
+
+
+    <script>
+
+        function ajax_get_json(usuarioIngresado){
+
+            var resultado = document.getElementById("info");
+            var xmlhttp;
+
+            if (window.XMLHttpRequest) {
+                    xmlhttp = new XMLHttpRequest();
+                } else {
+                    xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+            }
+
+            if(usuarioIngresado.length === 0){
+                resultado.innerHTML = "";
+            }else{
+                xmlhttp.onreadystatechange = function(){
+                    if(xmlhttp.readyState === 4 && xmlhttp.status === 200){
+                        var datos = JSON.parse(xmlhttp.responseText);
+                        var x = encontrarPersonas(datos, usuarioIngresado);
+
+                        var mensaje = (x === true) ? "<span class = 'encontrado'>Si fue encontrado</span>":
+                                                        "<span class = 'no-encontrado'>No fue encontrado</span>";
+                        
+                        resultado.innerHTML = mensaje;
+                    }
+                }
+                xmlhttp.open("GET", "datos.json", true);
+                xmlhttp.send();
+            }
+        }
+
+        function encontrarPersonas(objectJSON, usuario){
+
+            var array = [];
+            for(var i in objectJSON){
+                var persona = objectJSON[i];
+                array.push(persona.nombre);
+            }
+            return array.indexOf(usuario) > -1;
+        }
+
+    </script>
+</body>
+</html>

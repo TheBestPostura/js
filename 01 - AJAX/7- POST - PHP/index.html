@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    Nombre: <input type="text" id="nombre"><br>
+    Apellido: <input type="text" id="apellido"><br>
+
+    <button onclick="ajax_post()">Enviar</button>
+
+    <div id="info"></div>
+
+
+    <script>
+
+        var resultado = document.getElementById("info");
+
+        function ajax_post() {
+
+
+            var xmlhttp;
+            if (window.XMLHttpRequest) {
+                xmlhttp = new XMLHttpRequest();
+            } else {
+                xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+            }
+
+            var nombre = document.getElementById("nombre").value;
+            var apellido = document.getElementById("apellido").value;
+
+            var informacionUsuario = "nombre=" + encodeURIComponent(nombre) + "&apellido=" + encodeURIComponent(apellido);
+
+            xmlhttp.onreadystatechange = function () {
+                if (xmlhttp.readyState === 4 && xmlhttp.status === 200) {
+                    var mensaje = xmlhttp.responseText;
+                    resultado.innerHTML = mensaje;
+                }
+            }
+
+            xmlhttp.open("POST", "servidor.php", true);
+            xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+            xmlhttp.send(informacionUsuario);
+
+        }
+
+    </script>
+</body>
+
+</html>

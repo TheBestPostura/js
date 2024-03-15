@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table>
+            <tr>
+                <td onmouseover="pintar (this, '#ff0000')" onmouseout="pintar(this, '#ffffff')">
+                    <a href="http://www.outlook.com">outlook</a>
+                </td>
+                <td onmouseover="pintar (this, '#00ff00')" onmouseout="pintar(this, '#ffffff')">
+                    <a href="http://www.Yahoo.com">Yahoo</a>
+                </td>
+                <td onmouseover="pintar (this, '#0000ff')" onmouseout="pintar(this, '#ffffff')">
+                    <a href="http://www.gmail.com">Gmail</a>
+                </td>
+            </tr>
+    </table>
+
+    <script>
+        function pintar(objeto, col){
+            objeto.style.backgroundColor = col;
+        }
+    </script>
+</body>
+</html>

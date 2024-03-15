@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>
+        Este programa permite analizar llamada a distintas responsabilidades del objeto windows
+    </p>
+    <form>
+        <br>
+        <input type="button" value="open()" onclick="abrir()">
+        <br>
+        <input type="button" value="open con parametros" onclick="abrirParametros()">
+        <br>
+        <input type="button" value="alert" onclick="mostrarAlerta()">
+        <br>
+        <input type="button" value="confirm" onclick="confirmar()">
+        <br>
+        <input type="button" value="prompt" onclick="cargarCadena()">
+    </form>
+
+    <script>
+        function abrir(){
+            let ventana = open();
+            ventana.document.write("Estoy escribiendo en la nueva ventana <br>");
+            ventana.document.write("Segunda linea");
+        }
+
+        function abrirParametros(){
+            let ventana = open('', '', 'status = yes, width=400, height=250, menubar=yes');
+            ventana.document.write("Esto es lo primero que va a aparecer <br>");
+        }
+
+        function mostrarAlerta(){
+            alert("Esta ventana es de alerta");
+        }
+
+        function confirmar(){
+            let respuesta = confirm("Presione alguno de los dos botones");
+            if(respuesta == true){
+                alert("Presiono aceptar")
+            }else{
+                alert("Presiono cancelar");
+            }
+        }
+
+        function cargarCadena(){
+            let cad = prompt("Cargue una palabra: ")
+            alert("Usted ingreso: " + cad);
+        }
+    </script>
+</body>
+</html>

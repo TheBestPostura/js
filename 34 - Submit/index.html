@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="procesar.php" method="POST" id="formulario1">
+        Ingrese Contraseña
+        <input type="password" id="clave1" size="20" required><br>
+        Repita Contraseña
+        <input type="password" id="clave2" size="20" required><br>
+        <input type="submit" id="confirmar" name="confirmar" value="confirmar">
+    </form>
+
+    <script>
+        document.getElementById("formulario1").addEventListener("submit", validar);
+
+        function validar(evt){
+            let clave1 = document.getElementById("clave1").value;
+            let clave2 = document.getElementById("clave2").value;
+            if(clave1 != clave2){
+                alert("Las claves no coinciden");
+                evt.preventDefault();
+            }else{
+                alert("Las claves coinciden, esta todo ok.");
+            }
+        }
+    </script>
+</body>
+</html>

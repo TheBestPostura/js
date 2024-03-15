@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos onclick</title>
+</head>
+<body>
+    <form>
+        <p>Ingrese su nombre:<input type="text" id="nombre"></p>
+        <p>Ingrese su edad:<input type="text" id="edad"></p>
+        <p><input type="button" value="Confirmar" onClick="mostrar()"></p>
+    </form>
+
+    <script>
+        function mostrar(){
+            let nombre = document.getElementById("nombre").value;
+            let edad = document.getElementById("edad").value;
+            alert("Ingreso el nombre " + nombre);
+            alert("y la edad " + edad);
+        }
+    </script>
+</body>
+</html>

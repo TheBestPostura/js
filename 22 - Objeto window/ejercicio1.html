@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <input type="button" value="abrirVentana" onclick="abrirVentana()">
+    </form>
+
+    <script>
+        function abrirVentana(){
+            let ventana = open('', '', 'status = yes, width=500px, height=500, menubar=yes');
+            ventana = document.write("Hola, esta es la segunda ventana");
+        }
+    </script>
+</body>
+</html>

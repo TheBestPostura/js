@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array</title>
+</head>
+<body>
+    <script>
+
+        function cargarSueldos(sueldos){
+            for(let i = 0; i < sueldos.length; i++){
+                let salarios = parseInt(prompt("Introduzca el sueldo del trabajador"));
+                sueldos[i] = salarios;
+            }
+        }
+
+        function calcularGastos(sueldos){
+            let total = 0;
+            for(let i = 0; i < sueldos.length; i++){
+                total += sueldos[i];
+            }
+            document.write("Listado de sueldos <br>");
+            for(let x = 0; x < sueldos.length; x++){
+                document.write(sueldos[x] + "<br>");
+            }
+            document.write("Total de gastos en sueldos: " + total);
+        }
+
+
+        let sueldos;
+        sueldos = new Array(5);
+        cargarSueldos(sueldos);
+        calcularGastos(sueldos);
+    </script>
+</body>
+</html>

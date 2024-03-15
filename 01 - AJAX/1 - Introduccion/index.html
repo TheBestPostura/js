@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curso de AJAX</title>
+</head>
+<body>
+    <button onclick="ejecutarAJAX()">Hazme click</button>
+    <div id="info"></div>
+
+
+    <script type="text/javascript">
+        function ejecutarAJAX(){
+
+                    //Para verificar navegadores antiguos
+                    /* 
+                    var ajaxRequest;
+                        if(window.XMLHttpRequest){
+                            ajaxResquest = new XMLHttpRequest();
+                        }else{
+                            ajaxRequest = new ActiveXObject("Microsoft.XMLHTTP");
+                        }
+                    */
+
+
+        // 0 Peticion no ha sido inicializada
+        // 1 Peticion ha sido establecida
+        // 2 Peticion ha sido enviada
+        // 3 Peticion ha sido procesada
+        // 4 peticion ha sido finalizada
+        var ajaxRequest = new XMLHttpRequest();
+        ajaxRequest.onreadystatechange = function(){
+
+            if(ajaxRequest.readyState == 4 && ajaxRequest.status == 200){
+                document.getElementById("info").innerHTML = ajaxRequest.responseText;
+            }
+        }
+
+        ajaxRequest.open("GET", "documento.txt", true);
+        ajaxRequest.send();
+    }
+    </script>
+</body>
+</html>

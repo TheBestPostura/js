@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio, estructura condicional compuesta</title>
+</head>
+<body>
+    <script>
+        let numero1, numero2;
+        let suma, resta, producto, division;
+        
+
+        numero1 = parseInt(prompt("Introduzca el primer numero: "));
+        numero2 = parseInt(prompt("Introduzca el segundo numero: "));
+
+        if(numero1 >  numero2){
+            suma = numero1 + numero2;
+            resta = numero1 - numero2;
+            document.write("La suma de ambos numeros es: " + suma);
+            document.write("<br>");
+            document.write("La resta de ambos numeros es: " + resta);
+            document.write("<br>");
+        }else{
+            producto = numero1 * numero2;
+            division = numero1 / numero2;
+            document.write("El producto de los numeros es: " + producto);
+            document.write("<br>");
+            document.write("La division entre los dos numeros es: " + division);
+
+        }
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ejercicio 1</title>
+</head>
+<body>
+    <script>
+        let alumnos = 1;
+        let aprobados = 0;
+        let suspensos = 0;
+
+        while (alumnos <=10 ){
+            notas = parseInt(prompt("Ingrese la nota del alumno: "));
+            if(notas >= 7){
+                aprobados++;
+            } else{
+                suspensos++;
+            }
+            alumnos++;
+        }
+        document.write("El total de aprobados es: " + aprobados + ", " + "el total de suspensos es: " + suspensos);
+    </script>
+</body>
+</html>

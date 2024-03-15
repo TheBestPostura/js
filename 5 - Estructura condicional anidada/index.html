@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estructura condicional aninada</title>
+</head>
+<body>
+    <script>
+        let nota1, nota2, nota3, promedio;
+        nota1 = parseInt(prompt("Introduzca la primera nota: "));
+        nota2 = parseInt(prompt("Introduzca la segunda nota: "));
+        nota3 = parseInt(prompt("Introduzca la tercera nota: "));
+
+        promedio = (nota1 + nota2 + nota3) / 3;
+
+        if(promedio >= 7){
+            document.write("Promocionado, su promedio es: " + promedio);
+        } else{
+            if(promedio >= 4){
+                document.write("Regular, su promedio es: " + promedio);
+            } else{
+                document.write("Suspenso.., su promedio es: " + promedio);
+            }
+        }
+    </script>
+</body>
+</html>

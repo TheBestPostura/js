@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digitos</title>
+</head>
+<body>
+    <script>
+        let valor = 0;
+        do{
+            valor = parseInt(prompt("Introduzca el valor entre 0 y 999:"));
+            if(valor < 10){
+                document.write("Tiene un digito ");
+            } else{
+                if(valor > 100){
+                    document.write("Tiene dos digitos");
+                }else{
+                    document.write("Tiene 3 digitos");
+                }
+            }
+            document.write("<br>");
+        } while(valor != 0)
+    </script>
+    
+</body>
+</html>

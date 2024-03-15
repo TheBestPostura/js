@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio array</title>
+</head>
+<body>
+    <script>
+        function cargarNumeros(numeros){
+            for(let i = 0; i < numeros.length; i++){
+            numero = parseInt(prompt("Introduzca el numero" + "llevas introducidos: " + i))
+            numeros[i] = numero;
+        }
+        document.write("Lista de numeros: " + "<br>");
+        document.write(numeros + "<br>");
+        }
+
+        function numeroMayor(numeros){
+            for(let x = 0; x < numeros.length; x++){
+                if(numeros[x] > 50){
+                    let numeroMayor;
+                    numeroMayor = numeros[x];
+                    document.write("Numero mayor a 50: " + "<br>");
+                    document.write(numeroMayor + "<br>");
+                }else if(numeros[x] >= 36 && numeros[x] < 50){
+                    let numeroMenor;
+                    numeroMenor = numeros[x];
+                    document.write("Numeros mayores o iguales a 36 pero menores a 50: " + numeroMenor + "<br>");
+                }
+            }
+        }
+
+        let numeros = new Array(3);
+        cargarNumeros(numeros);
+        numeroMayor(numeros);
+    </script>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clase Date</title>
+</head>
+<body>
+    <script>
+
+        //clase predefinida para utilizar la clase date
+
+       /* 
+        fecha = new Date(); //Creacion de un objeto de la clase date
+        fecha = new Date(2024, 1, 3);
+        fecha = new Date(año, mes, hora, minuto, segundo);
+
+        navidad2023 = new Date(2023, 12, 25);
+        */
+
+
+        //El objeto date dispone de otros metodos
+/*
+        getFullYear();
+        setFullYear();
+        getMonth();
+        setMonth(mes);
+        getDate();
+        setDate(dias);
+        getHours()
+        setHours(horas)
+        getMinutes()
+        setMinutes(minutos)
+        getSeconds()
+        setSeconds(segundos)
+*/
+        //Ejemplo de una pagina con fecha y hora actual
+
+        function mostrarFechaHora(){
+            let fecha;
+            fecha = new Date();
+            document.write("Hoy es ");
+            document.write(fecha.getDate() + "/");
+            document.write((fecha.getMonth() + 1) + '/');
+            document.write(fecha.getFullYear());
+            document.write('<br>');
+            document.write('Es la hora ');
+            document.write(fecha.getHours() + ':');
+            document.write(fecha.getMinutes() + ':');
+            document.write(fecha.getSeconds());
+        }
+
+        mostrarFechaHora();
+
+    </script>
+</body>
+</html>
